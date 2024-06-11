@@ -227,6 +227,62 @@ multi line comment
 # dumb_sentence('Sally', 'farts','gently')
 # dumb_sentence(item="awesome")
 # dumb_sentence(item="awesome", action="is")
+# def add_numbers(*args):
+#     total = 0
+#     for a in args:
+#         total += a
+#     print(total)
+#
+# # function with flexible arguments
+# add_numbers(3)
+# add_numbers(3, 32)
+# add_numbers(3,43,5453, 354234, 463463)
+# how to create a function with any amount of arguments
+# def add_numbers(*args):
+#     total = 0
+#     for a in args:
+#         total += a
+#     print(total)
+#
+# add_numbers(3)
+# add_numbers(3, 32)
+
+#
+# # Unpacking list
+# def health_calculator(age, apples_ate, cigs_smoked):
+#     answer = (100-age) + (apples_ate *3.5) - (cigs_smoked*2)
+#     print(answer)
+#
+#
+# buckys_data = [27, 20, 0]
+#
+# health_calculator(buckys_data[0], buckys_data[1], buckys_data[2])
+# # Unpack arguments
+# health_calculator(*buckys_data)
+
+# sets collection of items but cant have duplicate
+# groceries = {'serial', 'milk', 'starcrunch', 'beer', 'duct tape', 'lotion', 'beer'}
+# print(groceries)
+# if 'milk' in groceries:
+#     print("You already have milk hoss!")
+# else:
+#     print("oh yea, you need mik!")
+
+# python Dictionaries - keys and values
+# classmates = {'Tony': 'cool but smells', 'Emma':'She sits behind me', 'Lucy': 'asks too many questions'}
+# # print(classmates)
+# # print(classmates['Emma'])
+#
+# for k, v in classmates.items():
+#     print(k +" "+ v)
+
+
+
+
+
+
+
+
 
 
 
