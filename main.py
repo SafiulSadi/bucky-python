@@ -1,4 +1,4 @@
-x = 3+4
+x = 3 + 4
 
 x = 3 * 20
 
@@ -139,6 +139,7 @@ bacon = 18
 multi line comment
 '''
 
+
 # print number and string in the same line
 # print(9, " Bucky")
 # magicNumber = 26
@@ -152,16 +153,80 @@ multi line comment
 # for i in range(1, 101):
 #     if i%4 == 0:
 #         print(i)
+#
+# # Continue
+# numbersTaken = [2, 5, 12, 13, 17]
+#
+# print("Here are the numbers that are still available")
+#
+# for n in range(1, 20):
+#     if n in numbersTaken:
+#         continue
+#     print(n)
+#
 
-# Continue
-numbersTaken = [2, 5, 12, 13, 17]
+# Functions
 
-print("Here are the numbers that are still available")
+# divide the program into manageable chunks
+# we can use it over and over again.
+# def beef():
+#     print("Dayum,functions are cool!")
+#
+#
+# def bitcoin_to_usd(btc):
+#     amount = btc * 527
+#     print(amount)
+#
+#
+# beef()
+# bitcoin_to_usd(3.85)
+# bitcoin_to_usd(1)
+# bitcoin_to_usd(13)
+# def allowed_dating_age(my_age):
+#     girls_age = my_age/2 + 7
+#     return girls_age
+#
+#
+# buckys_limit = allowed_dating_age(27)
+# creepy_joe_limit = allowed_dating_age(49)
+# print("Bucky can date girls",buckys_limit," or older")
+# print("Creepy joe can date girls",creepy_joe_limit," or older")
+# for x in range (51):
+#     print(allowed_dating_age(x), "is the age limit for age",x)
+#
+# def get_gender(sex = "Unknown"):
+#     if sex is 'm':
+#         sex = "Male"
+#     elif sex is 'f':
+#         sex = 'Female'
+#     print(sex)
+#
+#
+# get_gender("m")
+# get_gender("f")
+# get_gender()
 
-for n in range(1, 20):
-    if n in numbersTaken:
-        continue
-    print(n)
+#
+# def corn():
+#     a = 7823
+#
+#     print(a)
+#
+#
+# def fudge():
+#     print(a)
+#
+#
+# corn()
+# fudge()
+
+# def dumb_sentence(name="Bucky", action="ate", item = 'tuna'):
+#     print(name, action, item)
+#
+# dumb_sentence()
+# dumb_sentence('Sally', 'farts','gently')
+# dumb_sentence(item="awesome")
+# dumb_sentence(item="awesome", action="is")
 
 
 
