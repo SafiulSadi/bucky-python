@@ -276,14 +276,126 @@ multi line comment
 # for k, v in classmates.items():
 #     print(k +" "+ v)
 
+# modules function included in another file
+# import tuna
+# import random
+#
+# tuna.fish()
+# print(random.randrange(0,5))
+#
+# import random
+# import urllib.request
+#
+# def download_web_image(url):
+#     name = random.randrange(1,1000)
+#     full_name = str(name) + ".jpg"
+#     urllib.request.urlretrieve(url, full_name)
+#
+#
+# download_web_image("https://plus.unsplash.com/premium_photo-1666900440561-94dcb6865554?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+#
+# fw = open('sample.txt', 'w')
+# fw.write('Writing some stuff in my text file\n')
+# fw.write('I like bacon \n')
+# fw.close()
+#
+# fr = open('sample.txt', 'r')
+# text = fr.read()
+# print(text)
+# fr.close()
+# from urllib import request
+# import random
+# def download_web_image(url):
+#     name = random.randrange(1, 1000)
+#     full_name = str(name) + ".jpg"
+#     request.urlretrieve(url, full_name, )
+#
+# download_web_image("https://plus.unsplash.com/premium_photo-1666900440561-94dcb6865554?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+# fw = open("sample1.txt", "w")
+# fw.write('writing some stuff in my text fiile\n')
+# fw.write('I like bacon\n')
+# fw.close()
+#
+# fr = open('sample1.txt', 'r')
+# text = fr.read()
+# print(text)
+# fr.close()
+# The goog csv project
+# from urllib import request
+# goog_url = 'https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=1686523687&period2=1718146087&interval=1d&events=history&includeAdjustedClose=true'
+#
+# def download_stock_data(csv_url):
+#     response = request.urlopen(csv_url)
+#     csv = response.read()
+#     csv_str = str(csv)
+#     lines = csv_str.split('\\n')
+#     dest_url = r'goog.csv'
+#     fx = open(dest_url, "w")
+#     for line in lines:
+#         fx.write(line + "\n")
+#     fx.close()
+#
+# download_stock_data(goog_url)
+
+# The web crawler
+
+import requests
+from bs4 import BeautifulSoup
+
+# url = https://evaly.com.bd/search?categoryName=Frozen%20Meat%2CT-Shirts%2CWatches%20For%20Men%2CCasual&page=1
+# # make core spider
+# def trade_spider(max_pages):
+#     page = 1
+#     while page < max_pages:
+#         url = 'https://en.wikipedia.org/wiki/English_Wikipedia'
+#         source_code = requests.get(url)
+#         plain_text = source_code.text
+#         soup = BeautifulSoup(plain_text, 'html.parser')
+#         for link in soup.findAll('a', {'class': 'mw-redirect'}):
+#             href = 'https://en.wikipedia.org/wiki/English_Wikipedia'+link.get('href')
+#             print(href)
+#
+#         page += 1
+#
+# trade_spider(1)
+#
+#
+# import requests
+# from bs4 import BeautifulSoup
+#
+# def trade_spider(max_pages):
+#     page = 1
+#     while page < max_pages:
+#         url = 'https://en.wikipedia.org/wiki/English_Wikipedia'
+#         source_code = requests.get(url)
+#         plain_text = source_code.text
+#         soup = BeautifulSoup(plain_text, 'html.parser')
+#         for link in soup.findAll('a', {'class': 'mw-redirect'}):
+#             href = 'https://en.wikipedia.org' + link.get('href')
+#             print(href)
+#         page += 1
+#
+# trade_spider(1)
 
 
+import requests
+from bs4 import BeautifulSoup
 
+def trade_spider(max_pages):
+    page = 1
+    while page <= max_pages:
+        url = "https://evaly.com.bd/search?categoryName=Frozen%20Meat%2CT-Shirts%2CWatches%20For%20Men%2CCasual&page="+ str(page)
+        source_code = requests.get(url)
+        plain_text = source_code.text
+        soup = BeautifulSoup(plain_text, "html.parser")
+        for link in soup.find_all('a', {'class': ''}):
+            href = link.get('href')
+            title = link.string
+            print(href)
+            print(title)
+        page +=1
 
-
-
-
-
+trade_spider(1)
 
 
 
