@@ -378,25 +378,70 @@ from bs4 import BeautifulSoup
 # trade_spider(1)
 
 
+# import requests
+# from bs4 import BeautifulSoup
+#
+# def trade_spider(max_pages):
+#     page = 1
+#     while page <= max_pages:
+#         url = "https://evaly.com.bd/search?categoryName=Frozen%20Meat%2CT-Shirts%2CWatches%20For%20Men%2CCasual&page="+ str(page)
+#         source_code = requests.get(url)
+#         plain_text = source_code.text
+#         soup = BeautifulSoup(plain_text, "html.parser")
+#         for link in soup.find_all('a', {'class': ''}):
+#             href = link.get('href')
+#             title = link.string
+#             print(href)
+#             print(title)
+#         page +=1
+#
+# trade_spider(1)
+
+# import requests
+# from bs4 import BeautifulSoup
+#
+# def trade_spider(max_pages)
+#     page = 1
+#     while page <=max_pages:
+#         url = "https://google.com"
+#         source_code = requests.get(url)
+#         plain_text = source_code.text
+#         soup = BeautifulSoup(plain_text)
+#         for link in soup.find_all('a', {"a", {'class': 'item name'}}):
+#             href = 'https://'
+
+
 import requests
 from bs4 import BeautifulSoup
 
-def trade_spider(max_pages):
+
+def trade_spider(max_page):
     page = 1
-    while page <= max_pages:
-        url = "https://evaly.com.bd/search?categoryName=Frozen%20Meat%2CT-Shirts%2CWatches%20For%20Men%2CCasual&page="+ str(page)
+    while page <= max_page:
+        url = 'https://google.com'
         source_code = requests.get(url)
         plain_text = source_code.text
         soup = BeautifulSoup(plain_text, "html.parser")
-        for link in soup.find_all('a', {'class': ''}):
+        for link in soup.find_all('a', ):
             href = link.get('href')
             title = link.string
-            print(href)
             print(title)
-        page +=1
+            print(href)
+
+        page = page + 1
+
+
 
 trade_spider(1)
 
+
+
+def get_single_item_data(item_url):
+    source_code = requests.get(item_url)
+    plain_text = source_code.text
+    soup = BeautifulSoup(plain_text, "html.parser")
+    for item_name in soup.find_all('div', {'class': 'gLFyf'}):
+        print(item_name.string)
 
 
 
