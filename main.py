@@ -414,36 +414,45 @@ from bs4 import BeautifulSoup
 import requests
 from bs4 import BeautifulSoup
 
-
-def trade_spider(max_page):
-    page = 1
-    while page <= max_page:
-        url = 'https://google.com'
-        source_code = requests.get(url)
-        plain_text = source_code.text
-        soup = BeautifulSoup(plain_text, "html.parser")
-        for link in soup.find_all('a', ):
-            href = link.get('href')
-            title = link.string
-            print(title)
-            print(href)
-
-        page = page + 1
-
-
-
-trade_spider(1)
-
-
-
-def get_single_item_data(item_url):
-    source_code = requests.get(item_url)
-    plain_text = source_code.text
-    soup = BeautifulSoup(plain_text, "html.parser")
-    for item_name in soup.find_all('div', {'class': 'gLFyf'}):
-        print(item_name.string)
+#
+# def trade_spider(max_page):
+#     page = 1
+#     while page <= max_page:
+#         url = 'https://google.com'
+#         source_code = requests.get(url)
+#         plain_text = source_code.text
+#         soup = BeautifulSoup(plain_text, "html.parser")
+#         for link in soup.find_all('a', ):
+#             href = link.get('href')
+#             title = link.string
+#             print(title)
+#             print(href)
+#
+#         page = page + 1
+#
+#
+#
+# trade_spider(1)
 
 
+
+# def get_single_item_data(item_url):
+#     source_code = requests.get(item_url)
+#     plain_text = source_code.text
+#     soup = BeautifulSoup(plain_text, "html.parser")
+#     for item_name in soup.find_all('div', {'class': 'gLFyf'}):
+#         print(item_name.string)
+
+n, m = map(int, input().split())
+a = 0
+b = 0
+count = 0
+for a in range(0, max(n, m)+1):
+    for b in range(0, max(n, m)+1):
+        if a**2 + b == n and a + b**2 == m:
+            count += 1
+
+print(count)
 
 
 
