@@ -442,17 +442,29 @@ from bs4 import BeautifulSoup
 #     soup = BeautifulSoup(plain_text, "html.parser")
 #     for item_name in soup.find_all('div', {'class': 'gLFyf'}):
 #         print(item_name.string)
+#
+# n, m = map(int, input().split())
+# a = 0
+# b = 0
+# count = 0
+# for a in range(0, max(n, m)+1):
+#     for b in range(0, max(n, m)+1):
+#         if a**2 + b == n and a + b**2 == m:
+#             count += 1
+#
+# print(count)
 
-n, m = map(int, input().split())
-a = 0
-b = 0
-count = 0
-for a in range(0, max(n, m)+1):
-    for b in range(0, max(n, m)+1):
-        if a**2 + b == n and a + b**2 == m:
-            count += 1
 
-print(count)
+print("Hello Datacamp!")
+
+
+
+
+
+
+
+
+
 
 
 
