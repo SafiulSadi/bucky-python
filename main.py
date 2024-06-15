@@ -468,20 +468,70 @@ from bs4 import BeautifulSoup
 #     except ValueError:
 #         print("Make sure and enter a number!")
 #
+#
+# while True:
+#     try:
+#         tuna = int(input("What is your fav number? "))
+#         print(18/ tuna)
+#         break
+#     except ValueError:
+#         print("Make sure and enter a number!")
+#     except ZeroDivisionError:
+#         print("Don't pick 0!")
+#     except:
+#         break
+#     finally:
+#         print("Loop complete")
+#
+# # classes and objects
+# class Enemy:
+#     life = 3
+#
+#
+#     def attack(self):
+#         print("ouch")
+#         self.life -= 1
+#
+#
+#     def check_life(self):
+#         if self.life <= 0:
+#             print("I am dead!")
+#         else:
+#             print(str(self.life)+ "life left")
+#
+# enemy1 = Enemy()
+# enemy2 = Enemy()
+# enemy1.attack()
+# enemy1.attack()
+# enemy1.check_life()
+# enemy2.check_life()
+#
+# class Tuna:
+#     def __init__(self):
+#         print("blurblrulburh")
+#
+#
+#     def swim(self):
+#         print("I am swimming!")
+#
+#
+# flipper = Tuna()
+# flipper.swim()
 
-while True:
-    try:
-        tuna = int(input("What is your fav number? "))
-        print(18/ tuna)
-        break
-    except ValueError:
-        print("Make sure and enter a number!")
-    except ZeroDivisionError:
-        print("Don't pick 0!")
-    except:
-        break
-    finally:
-        print("Loop complete")
+class Enemy:
+    def __init__(self, x):
+        self.energy = x
+
+    def get_energy(self):
+        print(self.energy)
+
+jason = Enemy(5)
+sandy = Enemy(18)
+
+jason.get_energy()
+sandy.get_energy()
+
+
 
 
 
