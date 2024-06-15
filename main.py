@@ -1,29 +1,29 @@
-x = 3 + 4
-
-x = 3 * 20
-
-x = 12 / 4
-
-x = 8 + 2
-
-x = 8 + 2 * 10
-
-x = (8 + 2) * 10
-
-# rounds and drop the decimal
-x = 18 // 4
-
-# modulus
-x = 18 % 4
-
-# ** means calculate the powers
-x = 2 ** 3
-
-# print(x)
-
-# varieble
-tuna = 5
-bacon = 18
+# x = 3 + 4
+#
+# x = 3 * 20
+#
+# x = 12 / 4
+#
+# x = 8 + 2
+#
+# x = 8 + 2 * 10
+#
+# x = (8 + 2) * 10
+#
+# # rounds and drop the decimal
+# x = 18 // 4
+#
+# # modulus
+# x = 18 % 4
+#
+# # ** means calculate the powers
+# x = 2 ** 3
+#
+# # print(x)
+#
+# # varieble
+# tuna = 5
+# bacon = 18
 # print(20+tuna)
 # print(bacon/ tuna )
 
@@ -455,12 +455,33 @@ from bs4 import BeautifulSoup
 # print(count)
 
 
-print("Hello Datacamp!")
+# print("Hello Datacamp!")
+# Bucky exceptions
+# salmon = int(input("what is your fav number?"))
+# print(salmon)
 
+# while True:
+#     try:
+#         number = int(input("What is your fav number hoss?"))
+#         print(18/number)
+#         break
+#     except ValueError:
+#         print("Make sure and enter a number!")
+#
 
-
-
-
+while True:
+    try:
+        tuna = int(input("What is your fav number? "))
+        print(18/ tuna)
+        break
+    except ValueError:
+        print("Make sure and enter a number!")
+    except ZeroDivisionError:
+        print("Don't pick 0!")
+    except:
+        break
+    finally:
+        print("Loop complete")
 
 
 
