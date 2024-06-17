@@ -534,7 +534,8 @@ sandy.get_energy()
 
 
 
-
+nazim = Enemy(8)
+nazim.get_energy()
 
 
 
